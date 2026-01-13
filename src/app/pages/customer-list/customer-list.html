@@ -1,0 +1,34 @@
+<!-- Table-style Navbar -->
+<div class="container mt-3">
+  <h2>Product List</h2>
+  
+  <!-- Loading indicator -->
+  <div *ngIf="loading" class="alert alert-info">
+    Loading products...
+  </div>
+  
+  <!-- Error message if loading fails -->
+  <div *ngIf="!loading && customers.length === 0" class="alert alert-warning">
+    No products found.
+  </div>
+  
+  <!-- Products table -->
+  <table *ngIf="!loading && customers.length > 0" class="table table-bordered">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Title</th>
+        <th scope="col">Price</th>
+        <th scope="col">Category</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of customers; let i = index">
+        <th scope="row">{{ product.id }}</th>
+        <td>{{ product.title }}</td>
+        <td>${{ product.price }}</td>
+        <td>{{ product.category?.name || 'N/A' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

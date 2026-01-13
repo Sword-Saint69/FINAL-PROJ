@@ -1,0 +1,82 @@
+:host {
+    display: block;
+    position: sticky;
+    top: 1rem;
+    z-index: 100;
+    padding: 0 1rem;
+}
+
+.navbar {
+    padding: 1rem 0;
+    border-radius: 16px;
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    letter-spacing: -0.5px;
+}
+
+.logo-icon {
+    color: var(--primary);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--text);
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary);
+}
+
+.cart-link {
+    position: relative;
+    padding: 0.5rem;
+    color: var(--text);
+    transition: var(--transition);
+    display: flex;
+    /* Ensure svg centers */
+}
+
+.cart-link:hover,
+.cart-link.active {
+    color: var(--primary);
+    background: rgba(var(--primary-h), 0.1);
+    border-radius: 50%;
+}
+
+.badge {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    background: var(--primary);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    min-width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+}

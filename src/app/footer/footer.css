@@ -1,0 +1,32 @@
+:host {
+    display: block;
+    margin-top: 4rem;
+    background: white;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.footer-content {
+    padding: 3rem 0;
+    text-align: center;
+    color: var(--text-light);
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-links a {
+    font-weight: 500;
+    color: var(--text);
+}
+
+.footer-links a:hover {
+    color: var(--primary);
+}
+
+.copyright {
+    font-size: 0.875rem;
+}

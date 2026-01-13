@@ -1,0 +1,14 @@
+<div class="product-card glass-panel">
+  <div class="image-wrapper" [routerLink]="['/products', product.id]" style="cursor: pointer">
+    <img [src]="product.images[0]" [alt]="product.title" class="product-image" loading="lazy">
+  </div>
+  <div class="product-info">
+    <h3 class="product-title" [routerLink]="['/products', product.id]" style="cursor: pointer">{{ product.title }}</h3>
+    <div class="product-meta">
+      <span class="price">\${{ product.price }}</span>
+      <button class="btn btn-primary btn-sm" (click)="addToCart()">
+        Add to Cart
+      </button>
+    </div>
+  </div>
+</div>
